@@ -1,7 +1,7 @@
 import { Input } from './Input'
 import data from "../data.json"
 
-export default function Home({searchParams}) {
+export default function Home({ searchParams }: { searchParams: any }) {
 
   return (
     <main>
