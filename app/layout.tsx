@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+import { ServiceWorker } from './ServiceWorker'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +20,7 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <title>GMO PWA</title>
         <link
           rel="stylesheet"
@@ -35,6 +36,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff"></meta>
       </head>
       <body className={inter.className}>{children}</body>
+      <ServiceWorker />
     </html>
   )
 }
